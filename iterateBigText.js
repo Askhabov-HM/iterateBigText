@@ -5,7 +5,7 @@
 // Поэтому чтобы не засорять память, можно воспользоваться итератором.
 // Решил реализовать.
 
-let longText = 'it is the test text so long and long and long how is can do';
+let longText = 'it is the test text so long and long and long how is can do do';
 
 //iterateText( longText, ' ' );
 
@@ -16,7 +16,7 @@ function iterateText( text, delim ){
 
     return{
         from: 0,
-        text,
+        text: text + ' ',
         delim,
         [Symbol.iterator]: function(){
             let { from,  text, delim} = this;
